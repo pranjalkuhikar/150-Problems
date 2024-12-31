@@ -209,21 +209,29 @@ const prompt = require("prompt-sync")();
 // console.log(LCM);
 
 // Question 12 (Count Vowels and Consonants)
-let str = "Hello How Are You?";
-let Vowel = 0;
-let Consonants = 0;
-str = str.toLowerCase();
+// let str = "Hello How Are You?";
+// let Vowel = 0;
+// let Consonants = 0;
+// str = str.toLowerCase();
+// for (let i = 0; i < str.length; i++) {
+//   if (
+//     str[i] === "a" ||
+//     str[i] === "e" ||
+//     str[i] === "i" ||
+//     str[i] === "o" ||
+//     str[i] === "u"
+//   ) {
+//     Vowel++;
+//   } else {
+//     Consonants++;
+//   }
+// }
+// console.log("Vowel", Vowel, "And Consonants ", Consonants);
+
+// Question 13 (Reversing a String)
+let str = "Hello";
+let temp = "";
 for (let i = 0; i < str.length; i++) {
-  if (
-    str[i] === "a" ||
-    str[i] === "e" ||
-    str[i] === "i" ||
-    str[i] === "o" ||
-    str[i] === "u"
-  ) {
-    Vowel++;
-  } else {
-    Consonants++;
-  }
+  temp += str[str.length - 1 - i];
 }
-console.log("Vowel", Vowel, "And Consonants ", Consonants);
+console.log(temp);
