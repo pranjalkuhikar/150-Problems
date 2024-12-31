@@ -23,9 +23,28 @@ const prompt = require("prompt-sync")();
 // console.log(PrimeNumber(1));
 
 // Question 3 (Leap Year {2014})
-function LeapYear(year) {
-  if (year % 4 === 0 && (year % 400 === 0 || year % 100 != 0))
-    return "Leap Year";
-  else return "Not a Leap Year";
+// function LeapYear(year) {
+//   if (year % 4 === 0 && (year % 400 === 0 || year % 100 != 0))
+//     return "Leap Year";
+//   else return "Not a Leap Year";
+// }
+// console.log(LeapYear(2044));
+
+// Question 4 (Armstrong Number {153,1634})
+function Armstrong(n) {
+  let copy = n;
+  let temp = n;
+  let count = 0;
+  let sum = 0;
+  while (n != 0) {
+    count++;
+    n = Math.floor(n / 10);
+  }
+  while (copy != 0) {
+    let lastDigit = copy % 10;
+    sum += Math.pow(lastDigit, count);
+    copy = Math.floor(copy / 10);
+  }
+  return sum === temp ? "Armstrong Number" : "Not a Armstrong Number";
 }
-console.log(LeapYear(2044));
+console.log(Armstrong(1634));
