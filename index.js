@@ -50,14 +50,39 @@ const prompt = require("prompt-sync")();
 // console.log(Armstrong(1634));
 
 // Question 5 (Fibonacci Series {0,1,1,2,3,5,8,13,21,34})
-function fib(n) {
-  let a = 0;
-  let b = 1;
-  for (let i = 0; i < n; i++) {
-    console.log(a);
-    let next = a + b;
-    a = b;
-    b = next;
+// function fib(n) {
+//   let a = 0;
+//   let b = 1;
+//   for (let i = 0; i < n; i++) {
+//     console.log(a);
+//     let next = a + b;
+//     a = b;
+//     b = next;
+//   }
+// }
+// fib(10);
+
+// Question 6 (Palindrome Number/String)
+function PalindromeNumber(n) {
+  let rev = 0;
+  let temp = n;
+  while (n != 0) {
+    let lastDigit = n % 10;
+    rev = rev * 10 + lastDigit;
+    n = Math.floor(n / 10);
   }
+  return rev === temp ? "Palindrome" : "Not a Palindrome";
 }
-fib(10);
+console.log(PalindromeNumber(1221));
+
+function PalindromeString(str) {
+  let left = 0;
+  let right = str.length - 1;
+  while (left < right) {
+    if (str[left] !== str[right]) return "Not a Palindrome";
+    left++;
+    right--;
+  }
+  return "Palindrome";
+}
+console.log(PalindromeString("level"));
