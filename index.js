@@ -31,20 +31,33 @@ const prompt = require("prompt-sync")();
 // console.log(LeapYear(2044));
 
 // Question 4 (Armstrong Number {153,1634})
-function Armstrong(n) {
-  let copy = n;
-  let temp = n;
-  let count = 0;
-  let sum = 0;
-  while (n != 0) {
-    count++;
-    n = Math.floor(n / 10);
+// function Armstrong(n) {
+//   let copy = n;
+//   let temp = n;
+//   let count = 0;
+//   let sum = 0;
+//   while (n != 0) {
+//     count++;
+//     n = Math.floor(n / 10);
+//   }
+//   while (copy != 0) {
+//     let lastDigit = copy % 10;
+//     sum += Math.pow(lastDigit, count);
+//     copy = Math.floor(copy / 10);
+//   }
+//   return sum === temp ? "Armstrong Number" : "Not a Armstrong Number";
+// }
+// console.log(Armstrong(1634));
+
+// Question 5 (Fibonacci Series {0,1,1,2,3,5,8,13,21,34})
+function fib(n) {
+  let a = 0;
+  let b = 1;
+  for (let i = 0; i < n; i++) {
+    console.log(a);
+    let next = a + b;
+    a = b;
+    b = next;
   }
-  while (copy != 0) {
-    let lastDigit = copy % 10;
-    sum += Math.pow(lastDigit, count);
-    copy = Math.floor(copy / 10);
-  }
-  return sum === temp ? "Armstrong Number" : "Not a Armstrong Number";
 }
-console.log(Armstrong(1634));
+fib(10);
