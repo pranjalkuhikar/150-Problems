@@ -113,99 +113,62 @@ const prompt = require("prompt-sync")();
 // Pyramid(5);
 
 //Patterns
-let n = 5;
-for (let i = 0; i < n; i++) {
-  for (let j = 0; j < i; j++) {
-    process.stdout.write("*");
-  }
-  console.log();
-}
-for (let i = 0; i < n; i++) {
-  for (let j = i; j < n; j++) {
-    process.stdout.write("*");
-  }
-  console.log();
-}
-for (let i = 0; i < n; i++) {
-  for (let j = i; j < n; j++) {
-    process.stdout.write(" ");
-  }
-  for (let k = 0; k < i; k++) {
-    process.stdout.write("*");
-  }
-  console.log();
-}
-for (let i = 0; i < n; i++) {
-  for (let j = 0; j < i; j++) {
-    process.stdout.write(" ");
-  }
-  for (let k = i; k < n; k++) {
-    process.stdout.write("*");
-  }
-  console.log();
-}
-for (let i = 0; i <= n; i++) {
-  for (let j = i; j < n; j++) {
-    process.stdout.write(" ");
-  }
-  for (let k = 1; k < 2 * i - 1; k++) {
-    process.stdout.write("*");
-  }
-  console.log();
-}
-for (let i = n - 1; i >= 1; i--) {
-  for (let j = n; j > i; j--) {
-    process.stdout.write(" ");
-  }
-  for (let k = 1; k < 2 * i; k++) {
-    process.stdout.write("*");
-  }
-  console.log();
-}
+// let n = 5;
+// for (let i = 0; i < n; i++) {
+//   for (let j = 0; j < i; j++) {
+//     process.stdout.write("*");
+//   }
+//   console.log();
+// }
+// for (let i = 0; i < n; i++) {
+//   for (let j = i; j < n; j++) {
+//     process.stdout.write("*");
+//   }
+//   console.log();
+// }
+// for (let i = 0; i < n; i++) {
+//   for (let j = i; j < n; j++) {
+//     process.stdout.write(" ");
+//   }
+//   for (let k = 0; k < i; k++) {
+//     process.stdout.write("*");
+//   }
+//   console.log();
+// }
+// for (let i = 0; i < n; i++) {
+//   for (let j = 0; j < i; j++) {
+//     process.stdout.write(" ");
+//   }
+//   for (let k = i; k < n; k++) {
+//     process.stdout.write("*");
+//   }
+//   console.log();
+// }
+// for (let i = 0; i <= n; i++) {
+//   for (let j = i; j < n; j++) {
+//     process.stdout.write(" ");
+//   }
+//   for (let k = 1; k < 2 * i-1; k++) {
+//     process.stdout.write("*");
+//   }
+//   console.log();
+// }
+// for (let i = n - 1; i >= 1; i--) {
+//   for (let j = n; j > i; j--) {
+//     process.stdout.write(" ");
+//   }
+//   for (let k = 1; k < 2 * i; k++) {
+//     process.stdout.write("*");
+//   }
+//   console.log();
+// }
 
 // Question 8 (Factorial Number {5!=120})
-// function Factorial(n) {
-//   let fact = 1;
-//   for (let i = 1; i <= n; i++) {
-//     fact *= i;
-//   }
-//   return fact;
-// }
-// console.log(Factorial(5));
-
-// Question 9 (Sum Of Digit)
-// function SumOfDigit(n) {
-//   let sum = 0;
-//   while (n != 0) {
-//     let lastDigit = n % 10;
-//     sum += lastDigit;
-//     n = Math.floor(n / 10);
-//   }
-//   return sum;
-// }
-// console.log(SumOfDigit(1234));
-
-// Question 10 (GCD (2))
-// let a = 10;
-// let b = 12;
-// while (b != 0) {
-//   let temp = b;
-//   b = a % b;
-//   a = temp;
-// }
-// console.log(a);
-
-// Question 11 (LCM (60))
-// let a = 10;
-// let b = 12;
-// let tempA = a;
-// let tempB = b;
-// while (b != 0) {
-//   let temp = b;
-//   b = a % b;
-//   a = temp;
-// }
-// let LCM = (tempA * tempB) / a;
-// console.log(LCM);
-
-// Question 12 (Count Vowels and Consonants)
+function Factorial(n) {
+  let fact = 1;
+  for (let i = 1; i <= n; i++) {
+    fact *= i;
+  }
+  return fact;
+}
+console.log(Factorial(5));
