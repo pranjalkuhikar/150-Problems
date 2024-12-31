@@ -86,3 +86,14 @@ function PalindromeString(str) {
   return "Palindrome";
 }
 console.log(PalindromeString("level"));
+
+function Palindrome(str) {
+  let isPalindrome = true;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] != str[str.length - 1 - i]) {
+      isPalindrome = false;
+      break;
+    }
+  }
+}
+console.log(PalindromeString("level"));
