@@ -174,13 +174,23 @@ const prompt = require("prompt-sync")();
 // console.log(Factorial(5));
 
 // Question 9 (Sum Of Digit)
-function SumOfDigit(n) {
-  let sum = 0;
-  while (n != 0) {
-    let lastDigit = n % 10;
-    sum += lastDigit;
-    n = Math.floor(n / 10);
-  }
-  return sum;
+// function SumOfDigit(n) {
+//   let sum = 0;
+//   while (n != 0) {
+//     let lastDigit = n % 10;
+//     sum += lastDigit;
+//     n = Math.floor(n / 10);
+//   }
+//   return sum;
+// }
+// console.log(SumOfDigit(1234));
+
+// Question 10 (GCD (2))
+let a = 10;
+let b = 12;
+while (b != 0) {
+  let temp = b;
+  b = a % b;
+  a = temp;
 }
-console.log(SumOfDigit(1234));
+console.log(a);
