@@ -164,11 +164,23 @@ const prompt = require("prompt-sync")();
 // }
 
 // Question 8 (Factorial Number {5!=120})
-function Factorial(n) {
-  let fact = 1;
-  for (let i = 1; i <= n; i++) {
-    fact *= i;
+// function Factorial(n) {
+//   let fact = 1;
+//   for (let i = 1; i <= n; i++) {
+//     fact *= i;
+//   }
+//   return fact;
+// }
+// console.log(Factorial(5));
+
+// Question 9 (Sum Of Digit)
+function SumOfDigit(n) {
+  let sum = 0;
+  while (n != 0) {
+    let lastDigit = n % 10;
+    sum += lastDigit;
+    n = Math.floor(n / 10);
   }
-  return fact;
+  return sum;
 }
-console.log(Factorial(5));
+console.log(SumOfDigit(1234));
