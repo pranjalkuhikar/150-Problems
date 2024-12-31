@@ -196,14 +196,34 @@ const prompt = require("prompt-sync")();
 // console.log(a);
 
 // Question 11 (LCM (60))
-let a = 10;
-let b = 12;
-let tempA = a;
-let tempB = b;
-while (b != 0) {
-  let temp = b;
-  b = a % b;
-  a = temp;
+// let a = 10;
+// let b = 12;
+// let tempA = a;
+// let tempB = b;
+// while (b != 0) {
+//   let temp = b;
+//   b = a % b;
+//   a = temp;
+// }
+// let LCM = (tempA * tempB) / a;
+// console.log(LCM);
+
+// Question 12 (Count Vowels and Consonants)
+let str = "Hello How Are You?";
+let Vowel = 0;
+let Consonants = 0;
+str = str.toLowerCase();
+for (let i = 0; i < str.length; i++) {
+  if (
+    str[i] === "a" ||
+    str[i] === "e" ||
+    str[i] === "i" ||
+    str[i] === "o" ||
+    str[i] === "u"
+  ) {
+    Vowel++;
+  } else {
+    Consonants++;
+  }
 }
-let LCM = (tempA * tempB) / a;
-console.log(LCM);
+console.log("Vowel", Vowel, "And Consonants ", Consonants);
