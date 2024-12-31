@@ -186,11 +186,24 @@ const prompt = require("prompt-sync")();
 // console.log(SumOfDigit(1234));
 
 // Question 10 (GCD (2))
+// let a = 10;
+// let b = 12;
+// while (b != 0) {
+//   let temp = b;
+//   b = a % b;
+//   a = temp;
+// }
+// console.log(a);
+
+// Question 11 (LCM (60))
 let a = 10;
 let b = 12;
+let tempA = a;
+let tempB = b;
 while (b != 0) {
   let temp = b;
   b = a % b;
   a = temp;
 }
-console.log(a);
+let LCM = (tempA * tempB) / a;
+console.log(LCM);
