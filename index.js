@@ -63,37 +63,51 @@ const prompt = require("prompt-sync")();
 // fib(10);
 
 // Question 6 (Palindrome Number/String)
-function PalindromeNumber(n) {
-  let rev = 0;
-  let temp = n;
-  while (n != 0) {
-    let lastDigit = n % 10;
-    rev = rev * 10 + lastDigit;
-    n = Math.floor(n / 10);
-  }
-  return rev === temp ? "Palindrome" : "Not a Palindrome";
-}
-console.log(PalindromeNumber(1221));
+// function PalindromeNumber(n) {
+//   let rev = 0;
+//   let temp = n;
+//   while (n != 0) {
+//     let lastDigit = n % 10;
+//     rev = rev * 10 + lastDigit;
+//     n = Math.floor(n / 10);
+//   }
+//   return rev === temp ? "Palindrome" : "Not a Palindrome";
+// }
+// console.log(PalindromeNumber(1221));
 
-function PalindromeString(str) {
-  let left = 0;
-  let right = str.length - 1;
-  while (left < right) {
-    if (str[left] !== str[right]) return "Not a Palindrome";
-    left++;
-    right--;
-  }
-  return "Palindrome";
-}
-console.log(PalindromeString("level"));
+// function PalindromeString(str) {
+//   let left = 0;
+//   let right = str.length - 1;
+//   while (left < right) {
+//     if (str[left] !== str[right]) return "Not a Palindrome";
+//     left++;
+//     right--;
+//   }
+//   return "Palindrome";
+// }
+// console.log(PalindromeString("level"));
 
-function Palindrome(str) {
-  let isPalindrome = true;
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] != str[str.length - 1 - i]) {
-      isPalindrome = false;
-      break;
+// function Palindrome(str) {
+//   let isPalindrome = true;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] != str[str.length - 1 - i]) {
+//       isPalindrome = false;
+//       break;
+//     }
+//   }
+// }
+// console.log(PalindromeString("level"));
+
+// Question 7 (Star Pyramid Pattern)
+function Pyramid(n) {
+  for (let i = 0; i < n; i++) {
+    for (let j = i; j < n; j++) {
+      process.stdout.write(" ");
     }
+    for (let k = 0; k < 2 * i - 1; k++) {
+      process.stdout.write("*");
+    }
+    console.log();
   }
 }
-console.log(PalindromeString("level"));
+Pyramid(5);
