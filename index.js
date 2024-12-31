@@ -8,16 +8,24 @@ const prompt = require("prompt-sync")();
 // console.log(EvenOdd(1));
 
 // Question 2 (Prime Number {7})
-function PrimeNumber(n) {
-  let count = 0;
-  for (let i = 1; i <= Math.sqrt(n); i++) {
-    if (n % i === 0) {
-      count++;
-      if (n / i != i) {
-        count++;
-      }
-    }
-  }
-  return count === 2 ? "Prime Number" : "Not a Prime Number";
+// function PrimeNumber(n) {
+//   let count = 0;
+//   for (let i = 1; i <= Math.sqrt(n); i++) {
+//     if (n % i === 0) {
+//       count++;
+//       if (n / i != i) {
+//         count++;
+//       }
+//     }
+//   }
+//   return count === 2 ? "Prime Number" : "Not a Prime Number";
+// }
+// console.log(PrimeNumber(1));
+
+// Question 3 (Leap Year {2014})
+function LeapYear(year) {
+  if (year % 4 === 0 && (year % 400 === 0 || year % 100 != 0))
+    return "Leap Year";
+  else return "Not a Leap Year";
 }
-console.log(PrimeNumber(1));
+console.log(LeapYear(2044));
