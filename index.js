@@ -273,32 +273,38 @@ const prompt = require("prompt-sync")();
 // console.log(sum);
 
 // Question 17 (Checking Armstrong Number In a Range)
-function armstrongNumber(num) {
-  let n = num;
-  let temp = num;
-  let sum = 0;
-  let count = 0;
-  while (n != 0) {
-    count++;
-    n = Math.floor(n / 10);
-  }
-  if (count == 1) return false;
-  while (num != 0) {
-    let lastDigit = num % 10;
-    sum += Math.pow(lastDigit, count);
-    num = Math.floor(num / 10);
-  }
-  if (sum === temp) {
-    return sum;
-  }
-}
+// function armstrongNumber(num) {
+//   let n = num;
+//   let temp = num;
+//   let sum = 0;
+//   let count = 0;
+//   while (n != 0) {
+//     count++;
+//     n = Math.floor(n / 10);
+//   }
+//   if (count == 1) return false;
+//   while (num != 0) {
+//     let lastDigit = num % 10;
+//     sum += Math.pow(lastDigit, count);
+//     num = Math.floor(num / 10);
+//   }
+//   if (sum === temp) {
+//     return sum;
+//   }
+// }
 
-let start = 1;
-let end = 500;
-let arr = [];
-for (let i = start; i <= end; i++) {
-  if (armstrongNumber(i)) {
-    arr.push(i);
-  }
+// let start = 1;
+// let end = 500;
+// let arr = [];
+// for (let i = start; i <= end; i++) {
+//   if (armstrongNumber(i)) {
+//     arr.push(i);
+//   }
+// }
+// console.log(arr);
+
+// Question 18 (Generating Multiplication Tables)
+let n = 4;
+for (let i = 1; i <= 10; i++) {
+  console.log(`4 x ${i} = ${n * i}`);
 }
-console.log(arr);
