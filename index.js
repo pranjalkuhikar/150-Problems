@@ -252,14 +252,22 @@ const prompt = require("prompt-sync")();
 // console.log("Smallest Number is ", min);
 
 // Question 15 (Sorting an Array)
+// let arr = [4, 6, 3, 45, 54, 3, 24, 3];
+// for (let i = 0; i < arr.length - 1; i++) {
+//   for (let j = 0; j < arr.length - 1 - i; j++) {
+//     if (arr[j] > arr[j + 1]) {
+//       let temp = arr[j];
+//       arr[j] = arr[j + 1];
+//       arr[j + 1] = temp;
+//     }
+//   }
+// }
+// console.log(arr);
+
+// Question 16 (Finding the sum of Element of an Array)
 let arr = [4, 6, 3, 45, 54, 3, 24, 3];
-for (let i = 0; i < arr.length - 1; i++) {
-  for (let j = 0; j < arr.length - 1 - i; j++) {
-    if (arr[j] > arr[j + 1]) {
-      let temp = arr[j];
-      arr[j] = arr[j + 1];
-      arr[j + 1] = temp;
-    }
-  }
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+  sum += arr[i];
 }
-console.log(arr);
+console.log(sum);
