@@ -304,7 +304,35 @@ const prompt = require("prompt-sync")();
 // console.log(arr);
 
 // Question 18 (Generating Multiplication Tables)
-let n = 4;
-for (let i = 1; i <= 10; i++) {
-  console.log(`4 x ${i} = ${n * i}`);
+// let n = 4;
+// for (let i = 1; i <= 10; i++) {
+//   console.log(`4 x ${i} = ${n * i}`);
+// }
+
+// Question 19 (Finding Prime Numbers in a Range)
+function checkingPrime(n) {
+  let count = 0;
+  for (let i = 1; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      count++;
+      if (n / i != i) {
+        count++;
+      }
+    }
+  }
+  if (count === 2) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+let start = 10;
+let end = 30;
+let arr = [];
+for (let i = start; i <= end; i++) {
+  if (checkingPrime(i)) {
+    arr.push(i);
+  }
+}
+console.log(arr);
