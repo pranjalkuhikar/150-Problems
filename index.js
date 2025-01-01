@@ -265,9 +265,40 @@ const prompt = require("prompt-sync")();
 // console.log(arr);
 
 // Question 16 (Finding the sum of Element of an Array)
-let arr = [4, 6, 3, 45, 54, 3, 24, 3];
-let sum = 0;
-for (let i = 0; i < arr.length; i++) {
-  sum += arr[i];
+// let arr = [4, 6, 3, 45, 54, 3, 24, 3];
+// let sum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// }
+// console.log(sum);
+
+// Question 17 (Checking Armstrong Number In a Range)
+function armstrongNumber(num) {
+  let n = num;
+  let temp = num;
+  let sum = 0;
+  let count = 0;
+  while (n != 0) {
+    count++;
+    n = Math.floor(n / 10);
+  }
+  if (count == 1) return false;
+  while (num != 0) {
+    let lastDigit = num % 10;
+    sum += Math.pow(lastDigit, count);
+    num = Math.floor(num / 10);
+  }
+  if (sum === temp) {
+    return sum;
+  }
 }
-console.log(sum);
+
+let start = 1;
+let end = 500;
+let arr = [];
+for (let i = start; i <= end; i++) {
+  if (armstrongNumber(i)) {
+    arr.push(i);
+  }
+}
+console.log(arr);
