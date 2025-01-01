@@ -229,9 +229,24 @@ const prompt = require("prompt-sync")();
 // console.log("Vowel", Vowel, "And Consonants ", Consonants);
 
 // Question 13 (Reversing a String)
-let str = "Hello";
-let temp = "";
-for (let i = 0; i < str.length; i++) {
-  temp += str[str.length - 1 - i];
+// let str = "Hello";
+// let temp = "";
+// for (let i = 0; i < str.length; i++) {
+//   temp += str[str.length - 1 - i];
+// }
+// console.log(temp);
+
+// Question 14 (Finding Largest and Smallest Number in an Array)
+let arr = [4, 6, 3, 45, 54, 3, 24, 3];
+let max = -Infinity;
+let min = Infinity;
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] > max) {
+    max = arr[i];
+  }
+  if (arr[i] < min) {
+    min = arr[i];
+  }
 }
-console.log(temp);
+console.log("Largest Number is ", max);
+console.log("Smallest Number is ", min);
