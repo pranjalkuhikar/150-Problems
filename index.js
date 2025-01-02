@@ -349,8 +349,24 @@ const prompt = require("prompt-sync")();
 // console.log(sum === temp ? "Perfect Number" : "Not a Perfect Number");
 
 // Question 21 (Calculating the Sum of Even Numbers in a Range)
-function EvenNumber(n) {
-  if (n % 2 === 0) {
+// function EvenNumber(n) {
+//   if (n % 2 === 0) {
+//     return n;
+//   }
+// }
+// let start = 1;
+// let end = 10;
+// let sum = 0;
+// for (let i = start; i <= end; i++) {
+//   if (EvenNumber(i)) {
+//     sum += i;
+//   }
+// }
+// console.log(sum);
+
+// Question 22 (Calculating the Sum of Odd Numbers in a Range)
+function OddNumber(n) {
+  if (n % 2 !== 0) {
     return n;
   }
 }
@@ -358,7 +374,7 @@ let start = 1;
 let end = 10;
 let sum = 0;
 for (let i = start; i <= end; i++) {
-  if (EvenNumber(i)) {
+  if (OddNumber(i)) {
     sum += i;
   }
 }
