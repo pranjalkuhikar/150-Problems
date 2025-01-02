@@ -452,15 +452,29 @@ const prompt = require("prompt-sync")();
 // }
 
 // Question 28 (Finding the Sum of the Digits of the Factorial of a Number)
-let n = 4;
-let fact = 1;
+// let n = 4;
+// let fact = 1;
+// let sum = 0;
+// for (let i = 1; i <= n; i++) {
+//   fact *= i;
+// }
+// while (fact != 0) {
+//   let lastDigit = fact % 10;
+//   sum += lastDigit;
+//   fact = Math.floor(fact / 10);
+// }
+// console.log(sum);
+
+// Question 29 (Finding the Largest Palindrome in a String)
+// let str = "babad";
+
+// Question 30 (Finding Missing Numbers in a Sequence)
+let arr = [1, 2, 4, 5];
 let sum = 0;
-for (let i = 1; i <= n; i++) {
-  fact *= i;
+for (let i = 0; i < arr.length; i++) {
+  sum += arr[i];
 }
-while (fact != 0) {
-  let lastDigit = fact % 10;
-  sum += lastDigit;
-  fact = Math.floor(fact / 10);
-}
-console.log(sum);
+let maxNum = Math.max(...arr);
+let actualSum = Math.floor((maxNum * (maxNum + 1)) / 2);
+let missingNumber = actualSum - sum;
+console.log(missingNumber);
