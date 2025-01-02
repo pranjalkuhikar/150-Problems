@@ -338,12 +338,28 @@ const prompt = require("prompt-sync")();
 // console.log(arr);
 
 // Question 20 (Checking for Perfect Numbers)
-let n = 28;
-let temp = n;
+// let n = 28;
+// let temp = n;
+// let sum = 0;
+// for (let i = 0; i < n; i++) {
+//   if (n % i === 0) {
+//     sum += i;
+//   }
+// }
+// console.log(sum === temp ? "Perfect Number" : "Not a Perfect Number");
+
+// Question 21 (Calculating the Sum of Even Numbers in a Range)
+function EvenNumber(n) {
+  if (n % 2 === 0) {
+    return n;
+  }
+}
+let start = 1;
+let end = 10;
 let sum = 0;
-for (let i = 0; i < n; i++) {
-  if (n % i === 0) {
+for (let i = start; i <= end; i++) {
+  if (EvenNumber(i)) {
     sum += i;
   }
 }
-console.log(sum === temp ? "Perfect Number" : "Not a Perfect Number");
+console.log(sum);
