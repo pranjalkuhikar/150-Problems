@@ -392,19 +392,28 @@ const prompt = require("prompt-sync")();
 // console.log(a);
 
 // Question 24 (Printing Prime Numbers Less Than a Given Number)
-function PrimeNumber(n) {
-  for (let i = 2; i <= Math.sqrt(n); i++) {
-    if (n % i === 0) {
-      return false;
-    }
-  }
-  return true;
+// function PrimeNumber(n) {
+//   for (let i = 2; i <= Math.sqrt(n); i++) {
+//     if (n % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// let n = 20;
+// let arr = [];
+// for (let i = 2; i < n; i++) {
+//   if (PrimeNumber(i)) {
+//     arr.push(i);
+//   }
+// }
+// console.log(arr);
+
+// Question 25 (Finding the Number of Digits in a Number)
+let n = 12345;
+let count = 0;
+while (n != 0) {
+  count++;
+  n = Math.floor(n / 10);
 }
-let n = 20;
-let arr = [];
-for (let i = 2; i < n; i++) {
-  if (PrimeNumber(i)) {
-    arr.push(i);
-  }
-}
-console.log(arr);
+console.log(count);
