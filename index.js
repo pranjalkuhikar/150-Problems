@@ -365,17 +365,28 @@ const prompt = require("prompt-sync")();
 // console.log(sum);
 
 // Question 22 (Calculating the Sum of Odd Numbers in a Range)
-function OddNumber(n) {
-  if (n % 2 !== 0) {
-    return n;
-  }
+// function OddNumber(n) {
+//   if (n % 2 !== 0) {
+//     return n;
+//   }
+// }
+// let start = 1;
+// let end = 10;
+// let sum = 0;
+// for (let i = start; i <= end; i++) {
+//   if (OddNumber(i)) {
+//     sum += i;
+//   }
+// }
+// console.log(sum);
+
+// Question 23 (Finding the Fibonacci Number at a Specific Position)
+let n = Number(prompt("Enter the Number :- "));
+let a = 0;
+let b = 1;
+for (let i = 0; i < n; i++) {
+  let temp = b;
+  b = a + b;
+  a = temp;
 }
-let start = 1;
-let end = 10;
-let sum = 0;
-for (let i = start; i <= end; i++) {
-  if (OddNumber(i)) {
-    sum += i;
-  }
-}
-console.log(sum);
+console.log(a);
