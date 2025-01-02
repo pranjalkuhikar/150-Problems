@@ -419,23 +419,34 @@ const prompt = require("prompt-sync")();
 // console.log(count);
 
 // Question 26 (Checking if a Number is a Narcissistic Number)
-let num = 153;
-let n = num;
-let temp = num;
-let sum = 0;
-let count = 0;
-while (n != 0) {
-  count++;
-  n = Math.floor(n / 10);
-}
-if (count == 1) return false;
-while (num != 0) {
-  let lastDigit = num % 10;
-  sum += Math.pow(lastDigit, count);
-  num = Math.floor(num / 10);
-}
-if (sum === temp) {
-  console.log("Narcissistic Number");
-} else {
-  console.log("Not Narcissistic Number");
+// let num = 153;
+// let n = num;
+// let temp = num;
+// let sum = 0;
+// let count = 0;
+// while (n != 0) {
+//   count++;
+//   n = Math.floor(n / 10);
+// }
+// if (count == 1) return false;
+// while (num != 0) {
+//   let lastDigit = num % 10;
+//   sum += Math.pow(lastDigit, count);
+//   num = Math.floor(num / 10);
+// }
+// if (sum === temp) {
+//   console.log("Narcissistic Number");
+// } else {
+//   console.log("Not Narcissistic Number");
+// }
+
+// Question 27 (Generating a Pattern of Numbers)
+let n = 3;
+let count = 1;
+for (let i = 0; i < n; i++) {
+  for (let j = 0; j <= i; j++) {
+    process.stdout.write(`${count} `);
+    count++;
+  }
+  console.log();
 }
