@@ -381,12 +381,30 @@ const prompt = require("prompt-sync")();
 // console.log(sum);
 
 // Question 23 (Finding the Fibonacci Number at a Specific Position)
-let n = Number(prompt("Enter the Number :- "));
-let a = 0;
-let b = 1;
-for (let i = 0; i < n; i++) {
-  let temp = b;
-  b = a + b;
-  a = temp;
+// let n = Number(prompt("Enter the Number :- "));
+// let a = 0;
+// let b = 1;
+// for (let i = 0; i < n; i++) {
+//   let temp = b;
+//   b = a + b;
+//   a = temp;
+// }
+// console.log(a);
+
+// Question 24 (Printing Prime Numbers Less Than a Given Number)
+function PrimeNumber(n) {
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }
-console.log(a);
+let n = 20;
+let arr = [];
+for (let i = 2; i < n; i++) {
+  if (PrimeNumber(i)) {
+    arr.push(i);
+  }
+}
+console.log(arr);
