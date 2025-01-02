@@ -441,12 +441,26 @@ const prompt = require("prompt-sync")();
 // }
 
 // Question 27 (Generating a Pattern of Numbers)
-let n = 3;
-let count = 1;
-for (let i = 0; i < n; i++) {
-  for (let j = 0; j <= i; j++) {
-    process.stdout.write(`${count} `);
-    count++;
-  }
-  console.log();
+// let n = 3;
+// let count = 1;
+// for (let i = 0; i < n; i++) {
+//   for (let j = 0; j <= i; j++) {
+//     process.stdout.write(`${count} `);
+//     count++;
+//   }
+//   console.log();
+// }
+
+// Question 28 (Finding the Sum of the Digits of the Factorial of a Number)
+let n = 4;
+let fact = 1;
+let sum = 0;
+for (let i = 1; i <= n; i++) {
+  fact *= i;
 }
+while (fact != 0) {
+  let lastDigit = fact % 10;
+  sum += lastDigit;
+  fact = Math.floor(fact / 10);
+}
+console.log(sum);
