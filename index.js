@@ -491,13 +491,29 @@ const prompt = require("prompt-sync")();
 // }
 
 // Question 32 (Finding the Median of an Array) (4)
-let arr = [3, 1, 2, 4, 5];
-arr.sort((a, b) => a - b);
-console.log(arr);
-if (arr.length % 2 != 0) {
-  console.log(arr[Math.floor(arr.length / 2)]);
-} else {
-  let mid1 = arr[arr.length / 2 - 1];
-  let mid2 = arr[arr.length / 2];
-  console.log((mid1 + mid2) / 2);
-}
+// let arr = [3, 1, 2, 4, 5];
+// arr.sort((a, b) => a - b);
+// console.log(arr);
+// if (arr.length % 2 != 0) {
+//   console.log(arr[Math.floor(arr.length / 2)]);
+// } else {
+//   let mid1 = arr[arr.length / 2 - 1];
+//   let mid2 = arr[arr.length / 2];
+//   console.log((mid1 + mid2) / 2);
+// }
+
+// Question 33 (Calculating the Power of a Number)
+// let base = 2;
+// let exponent = 3;
+// let n = 1;
+// for (let i = 0; i < exponent; i++) {
+//   n *= base;
+// }
+// console.log(n);
+
+// Question 34 (Checking for an Anagram)
+let s1 = "listen";
+let s2 = "silent";
+s1 = s1.split("").sort().join("");
+s2 = s2.split("").sort().join("");
+console.log(s1 === s1);
