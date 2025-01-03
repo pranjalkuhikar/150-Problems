@@ -480,12 +480,24 @@ const prompt = require("prompt-sync")();
 // console.log(missingNumber);
 
 // Question 31 (Generating a Pascal’s Triangle)
-let n = 4;
-for (let i = 0; i < n; i++) {
-  let current = 1;
-  for (let j = 0; j <= i; j++) {
-    process.stdout.write(current + " ");
-    current = (current * (i - j)) / (j + 1);
-  }
-  console.log();
+// let n = 4;
+// for (let i = 0; i < n; i++) {
+//   let current = 1;
+//   for (let j = 0; j <= i; j++) {
+//     process.stdout.write(current + " ");
+//     current = (current * (i - j)) / (j + 1);
+//   }
+//   console.log();
+// }
+
+// Question 32 (Finding the Median of an Array) (4)
+let arr = [3, 1, 2, 4, 5];
+arr.sort((a, b) => a - b);
+console.log(arr);
+if (arr.length % 2 != 0) {
+  console.log(arr[Math.floor(arr.length / 2)]);
+} else {
+  let mid1 = arr[arr.length / 2 - 1];
+  let mid2 = arr[arr.length / 2];
+  console.log((mid1 + mid2) / 2);
 }
