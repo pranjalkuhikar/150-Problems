@@ -469,12 +469,23 @@ const prompt = require("prompt-sync")();
 // let str = "babad";
 
 // Question 30 (Finding Missing Numbers in a Sequence)
-let arr = [1, 2, 4, 5];
-let sum = 0;
-for (let i = 0; i < arr.length; i++) {
-  sum += arr[i];
+// let arr = [1, 2, 4, 5];
+// let sum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// }
+// let maxNum = Math.max(...arr);
+// let actualSum = Math.floor((maxNum * (maxNum + 1)) / 2);
+// let missingNumber = actualSum - sum;
+// console.log(missingNumber);
+
+// Question 31 (Generating a Pascal’s Triangle)
+let n = 4;
+for (let i = 0; i < n; i++) {
+  let current = 1;
+  for (let j = 0; j <= i; j++) {
+    process.stdout.write(current + " ");
+    current = (current * (i - j)) / (j + 1);
+  }
+  console.log();
 }
-let maxNum = Math.max(...arr);
-let actualSum = Math.floor((maxNum * (maxNum + 1)) / 2);
-let missingNumber = actualSum - sum;
-console.log(missingNumber);
