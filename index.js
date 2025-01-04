@@ -519,25 +519,37 @@ const prompt = require("prompt-sync")();
 // console.log(s1 === s1);
 
 // Question 35 (Finding the Sum of Prime Numbers in a Range)
-function PrimeNumber(n) {
-  let count = 0;
-  for (let i = 1; i <= Math.sqrt(n); i++) {
-    if (n % i === 0) {
-      count++;
-      if (n / i != i) {
-        count++;
-      }
-    }
-  }
-  return count === 2;
-}
+// function PrimeNumber(n) {
+//   let count = 0;
+//   for (let i = 1; i <= Math.sqrt(n); i++) {
+//     if (n % i === 0) {
+//       count++;
+//       if (n / i != i) {
+//         count++;
+//       }
+//     }
+//   }
+//   return count === 2;
+// }
 
-let start = 1;
-let end = 10;
+// let start = 1;
+// let end = 10;
+// let sum = 0;
+// for (let i = start; i <= end; i++) {
+//   if (PrimeNumber(i)) {
+//     sum += i;
+//   }
+// }
+// console.log(sum);
+
+// Question 36 (Finding the N-th Triangular Number)
+let n = 4;
+// Method 1
 let sum = 0;
-for (let i = start; i <= end; i++) {
-  if (PrimeNumber(i)) {
-    sum += i;
-  }
+for (let i = 1; i <= n; i++) {
+  sum += i;
 }
+console.log(sum);
+// Method 2
+let sum = (n * (n + 1)) / 2;
 console.log(sum);
