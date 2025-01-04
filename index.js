@@ -593,18 +593,31 @@ const prompt = require("prompt-sync")();
 // }
 
 // Question 40 (Calculating the Sum of Digits of a Number Until Single Digit)
-function SumOfDigit(n) {
-  let sum = 0;
-  while (n != 0) {
-    let lastDigit = n % 10;
-    sum += lastDigit;
-    n = Math.floor(n / 10);
-  }
-  return sum;
-}
+// function SumOfDigit(n) {
+//   let sum = 0;
+//   while (n != 0) {
+//     let lastDigit = n % 10;
+//     sum += lastDigit;
+//     n = Math.floor(n / 10);
+//   }
+//   return sum;
+// }
 
-let n = 9875;
-while (n >= 10) {
-  n = SumOfDigit(n);
+// let n = 9875;
+// while (n >= 10) {
+//   n = SumOfDigit(n);
+// }
+// console.log(n);
+
+// Question 41 (Finding the Count of Specific Digits in a Number)
+let n = 122333;
+let digit = 3;
+let count = 0;
+while (n != 0) {
+  let lastDigit = n % 10;
+  if (lastDigit === digit) {
+    count++;
+  }
+  n = Math.floor(n / 10);
 }
-console.log(n);
+console.log(count);
