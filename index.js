@@ -655,9 +655,18 @@ const prompt = require("prompt-sync")();
 // let arr = [1, 2, 2, 3, 4, 4, 4];
 
 // Question 46 (Determining the Length of a String Without Using Built-In Functions)
-let str = "hello";
-let count = 0;
-for (let char of str) {
-  count++;
+// let str = "hello";
+// let count = 0;
+// for (let char of str) {
+//   count++;
+// }
+// console.log(count);
+
+// Question 47 (Generating a Number Pyramid)
+let n = 4;
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= i; j++) {
+    process.stdout.write(`${j}`);
+  }
+  console.log();
 }
-console.log(count);
