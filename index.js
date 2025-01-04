@@ -643,10 +643,21 @@ const prompt = require("prompt-sync")();
 // }
 
 // Question 44 (Finding the Average of Numbers in an Array)
-let arr = [1, 2, 3, 4, 5];
-let sum = 0;
-for (let i = 0; i < arr.length; i++) {
-  sum += arr[i];
+// let arr = [1, 2, 3, 4, 5];
+// let sum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// }
+// let Average = sum / arr.length;
+// console.log(Average);
+
+// Question 45 (Finding the Mode of Numbers in an Array)
+// let arr = [1, 2, 2, 3, 4, 4, 4];
+
+// Question 46 (Determining the Length of a String Without Using Built-In Functions)
+let str = "hello";
+let count = 0;
+for (let char of str) {
+  count++;
 }
-let Average = sum / arr.length;
-console.log(Average);
+console.log(count);
