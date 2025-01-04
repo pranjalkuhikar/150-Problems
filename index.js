@@ -672,25 +672,39 @@ const prompt = require("prompt-sync")();
 // }
 
 // Question 48 (Finding the Sum of Prime Factors of a Number)
-function PrimeNumber(n) {
-  let count = 0;
-  for (let i = 1; i <= Math.sqrt(n); i++) {
-    if (n % i === 0) {
-      count++;
-      if (n / i != i) {
-        count++;
-      }
-    }
+// function PrimeNumber(n) {
+//   let count = 0;
+//   for (let i = 1; i <= Math.sqrt(n); i++) {
+//     if (n % i === 0) {
+//       count++;
+//       if (n / i != i) {
+//         count++;
+//       }
+//     }
+//   }
+//   return count === 2;
+// }
+// let n = 12;
+// let sum = 0;
+// for (let i = 1; i <= n; i++) {
+//   if (n % i === 0) {
+//     if (PrimeNumber(i)) {
+//       sum += i;
+//     }
+//   }
+// }
+// console.log(sum);
+
+// Question 49 (Finding the Second Largest Number in an Array)
+let arr = [10, 20, 4, 45, 99];
+let max = arr[0];
+let sMax = -1;
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] > max) {
+    sMax = max;
+    max = arr[i];
+  } else if (arr[i] > sMax && arr[i] != max) {
+    sMax = arr[i];
   }
-  return count === 2;
 }
-let n = 12;
-let sum = 0;
-for (let i = 1; i <= n; i++) {
-  if (n % i === 0) {
-    if (PrimeNumber(i)) {
-      sum += i;
-    }
-  }
-}
-console.log(sum);
+console.log(sMax);
