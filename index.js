@@ -623,13 +623,21 @@ const prompt = require("prompt-sync")();
 // console.log(count);
 
 // Question 42 (Generating a Fibonacci Sequence Using Recursion)
-function fib(n) {
-  if (n === 0) return 0;
-  if (n === 1) return 1;
-  if (n > 2) return n;
-  return fib(n - 1) + fib(n - 2);
-}
-n = 5;
-for (let i = 0; i < n; i++) {
-  console.log(fib(i));
+// function fib(n) {
+//   if (n === 0) return 0;
+//   if (n === 1) return 1;
+//   if (n > 2) return n;
+//   return fib(n - 1) + fib(n - 2);
+// }
+// n = 5;
+// for (let i = 0; i < n; i++) {
+//   console.log(fib(i));
+// }
+
+// Question 43 (Finding All Divisors of a Number)
+let n = 12;
+for (let i = 1; i <= n; i++) {
+  if (n % i === 0) {
+    console.log(i);
+  }
 }
