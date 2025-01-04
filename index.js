@@ -555,12 +555,23 @@ const prompt = require("prompt-sync")();
 // console.log(sum);
 
 // Question 37 (Checking for Perfect Squares)
-let n = 25;
-let isPerfectSquare = false;
-for (let i = 0; i <= n; i++) {
-  if (i * i === n) {
-    isPerfectSquare = true;
-    break;
-  }
+// let n = 25;
+// let isPerfectSquare = false;
+// for (let i = 0; i <= n; i++) {
+//   if (i * i === n) {
+//     isPerfectSquare = true;
+//     break;
+//   }
+// }
+// console.log(isPerfectSquare);
+
+// Question 38 (Finding the Sum of Squares of Digit)
+let n = 123;
+let sum = 0;
+while (n != 0) {
+  let lastDigit = n % 10;
+  sum += lastDigit * lastDigit;
+  //   sum += Math.pow(lastDigit, 2);
+  n = Math.floor(n / 10);
 }
-console.log(isPerfectSquare);
+console.log(sum);
