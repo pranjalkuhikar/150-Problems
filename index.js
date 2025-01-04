@@ -635,9 +635,18 @@ const prompt = require("prompt-sync")();
 // }
 
 // Question 43 (Finding All Divisors of a Number)
-let n = 12;
-for (let i = 1; i <= n; i++) {
-  if (n % i === 0) {
-    console.log(i);
-  }
+// let n = 12;
+// for (let i = 1; i <= n; i++) {
+//   if (n % i === 0) {
+//     console.log(i);
+//   }
+// }
+
+// Question 44 (Finding the Average of Numbers in an Array)
+let arr = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+  sum += arr[i];
 }
+let Average = sum / arr.length;
+console.log(Average);
