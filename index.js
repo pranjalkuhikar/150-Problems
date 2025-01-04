@@ -543,13 +543,24 @@ const prompt = require("prompt-sync")();
 // console.log(sum);
 
 // Question 36 (Finding the N-th Triangular Number)
-let n = 4;
+// let n = 4;
 // Method 1
-let sum = 0;
-for (let i = 1; i <= n; i++) {
-  sum += i;
-}
-console.log(sum);
+// let sum = 0;
+// for (let i = 1; i <= n; i++) {
+//   sum += i;
+// }
+// console.log(sum);
 // Method 2
-let sum = (n * (n + 1)) / 2;
-console.log(sum);
+// let sum = (n * (n + 1)) / 2;
+// console.log(sum);
+
+// Question 37 (Checking for Perfect Squares)
+let n = 25;
+let isPerfectSquare = false;
+for (let i = 0; i <= n; i++) {
+  if (i * i === n) {
+    isPerfectSquare = true;
+    break;
+  }
+}
+console.log(isPerfectSquare);
