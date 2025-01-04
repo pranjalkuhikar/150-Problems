@@ -577,17 +577,34 @@ const prompt = require("prompt-sync")();
 // console.log(sum);
 
 // Question 39 (Generating a Square Matrix of a Given Size)
-let size = Number(prompt("Enter the row Size "));
-let arr = new Array(size);
-for (let i = 0; i < arr.length; i++) {
-  arr[i] = new Array(size);
-}
-let count = 1;
-for (let i = 0; i < arr.length; i++) {
-  for (let j = 0; j < arr[i].length; j++) {
-    arr[i][j] = count++;
+// let size = Number(prompt("Enter the row Size "));
+// let arr = new Array(size);
+// for (let i = 0; i < arr.length; i++) {
+//   arr[i] = new Array(size);
+// }
+// let count = 1;
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = 0; j < arr[i].length; j++) {
+//     arr[i][j] = count++;
+//   }
+// }
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
+
+// Question 40 (Calculating the Sum of Digits of a Number Until Single Digit)
+function SumOfDigit(n) {
+  let sum = 0;
+  while (n != 0) {
+    let lastDigit = n % 10;
+    sum += lastDigit;
+    n = Math.floor(n / 10);
   }
+  return sum;
 }
-for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
+
+let n = 9875;
+while (n >= 10) {
+  n = SumOfDigit(n);
 }
+console.log(n);
