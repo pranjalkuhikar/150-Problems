@@ -610,14 +610,26 @@ const prompt = require("prompt-sync")();
 // console.log(n);
 
 // Question 41 (Finding the Count of Specific Digits in a Number)
-let n = 122333;
-let digit = 3;
-let count = 0;
-while (n != 0) {
-  let lastDigit = n % 10;
-  if (lastDigit === digit) {
-    count++;
-  }
-  n = Math.floor(n / 10);
+// let n = 122333;
+// let digit = 3;
+// let count = 0;
+// while (n != 0) {
+//   let lastDigit = n % 10;
+//   if (lastDigit === digit) {
+//     count++;
+//   }
+//   n = Math.floor(n / 10);
+// }
+// console.log(count);
+
+// Question 42 (Generating a Fibonacci Sequence Using Recursion)
+function fib(n) {
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+  if (n > 2) return n;
+  return fib(n - 1) + fib(n - 2);
 }
-console.log(count);
+n = 5;
+for (let i = 0; i < n; i++) {
+  console.log(fib(i));
+}
