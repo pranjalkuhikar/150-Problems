@@ -663,10 +663,34 @@ const prompt = require("prompt-sync")();
 // console.log(count);
 
 // Question 47 (Generating a Number Pyramid)
-let n = 4;
-for (let i = 1; i <= n; i++) {
-  for (let j = 1; j <= i; j++) {
-    process.stdout.write(`${j}`);
+// let n = 4;
+// for (let i = 1; i <= n; i++) {
+//   for (let j = 1; j <= i; j++) {
+//     process.stdout.write(`${j}`);
+//   }
+//   console.log();
+// }
+
+// Question 48 (Finding the Sum of Prime Factors of a Number)
+function PrimeNumber(n) {
+  let count = 0;
+  for (let i = 1; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      count++;
+      if (n / i != i) {
+        count++;
+      }
+    }
   }
-  console.log();
+  return count === 2;
 }
+let n = 12;
+let sum = 0;
+for (let i = 1; i <= n; i++) {
+  if (n % i === 0) {
+    if (PrimeNumber(i)) {
+      sum += i;
+    }
+  }
+}
+console.log(sum);
