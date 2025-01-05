@@ -1,13 +1,14 @@
 const prompt = require("prompt-sync")();
+// (7,412,1281,2235)
 
-// Question 1 (Even Odd Number {8})
+// Question 1 (Even Odd Number {8}) (1812)
 // function EvenOdd(n) {
 //   if (n / 2 === 0) return "even";
 //   else return "odd";
 // }
 // console.log(EvenOdd(1));
 
-// Question 2 (Prime Number {7})
+// Question 2 (Prime Number {7})(204)
 // function PrimeNumber(n) {
 //   let count = 0;
 //   for (let i = 1; i <= Math.sqrt(n); i++) {
@@ -30,7 +31,7 @@ const prompt = require("prompt-sync")();
 // }
 // console.log(LeapYear(2044));
 
-// Question 4 (Armstrong Number {153,1634})
+// Question 4 (Armstrong Number {153,1634})(1134)
 // function Armstrong(n) {
 //   let copy = n;
 //   let temp = n;
@@ -49,7 +50,7 @@ const prompt = require("prompt-sync")();
 // }
 // console.log(Armstrong(1634));
 
-// Question 5 (Fibonacci Series {0,1,1,2,3,5,8,13,21,34})
+// Question 5 (Fibonacci Series {0,1,1,2,3,5,8,13,21,34}) (509)
 // function fib(n) {
 //   let a = 0;
 //   let b = 1;
@@ -62,7 +63,7 @@ const prompt = require("prompt-sync")();
 // }
 // fib(10);
 
-// Question 6 (Palindrome Number/String)
+// Question 6 (Palindrome Number/String) (9,125)
 // function PalindromeNumber(n) {
 //   let rev = 0;
 //   let temp = n;
@@ -163,7 +164,7 @@ const prompt = require("prompt-sync")();
 //   console.log();
 // }
 
-// Question 8 (Factorial Number {5!=120})
+// Question 8 (Factorial Number {5!=120}) (172)
 // function Factorial(n) {
 //   let fact = 1;
 //   for (let i = 1; i <= n; i++) {
@@ -173,7 +174,7 @@ const prompt = require("prompt-sync")();
 // }
 // console.log(Factorial(5));
 
-// Question 9 (Sum Of Digit)
+// Question 9 (Sum Of Digit) (1281)
 // function SumOfDigit(n) {
 //   let sum = 0;
 //   while (n != 0) {
@@ -592,7 +593,7 @@ const prompt = require("prompt-sync")();
 //   console.log(arr[i]);
 // }
 
-// Question 40 (Calculating the Sum of Digits of a Number Until Single Digit)
+// Question 40 (Calculating the Sum of Digits of a Number Until Single Digit)(258)
 // function SumOfDigit(n) {
 //   let sum = 0;
 //   while (n != 0) {
@@ -696,15 +697,17 @@ const prompt = require("prompt-sync")();
 // console.log(sum);
 
 // Question 49 (Finding the Second Largest Number in an Array)
-let arr = [10, 20, 4, 45, 99];
-let max = arr[0];
-let sMax = -1;
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i] > max) {
-    sMax = max;
-    max = arr[i];
-  } else if (arr[i] > sMax && arr[i] != max) {
-    sMax = arr[i];
-  }
-}
-console.log(sMax);
+// let arr = [10, 20, 4, 45, 99];
+// let max = arr[0];
+// let sMax = -1;
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] > max) {
+//     sMax = max;
+//     max = arr[i];
+//   } else if (arr[i] > sMax && arr[i] != max) {
+//     sMax = arr[i];
+//   }
+// }
+// console.log(sMax);
+
+// Question 50 (Finding the Longest Substring Without Repeating Characters)
